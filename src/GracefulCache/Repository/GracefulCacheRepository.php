@@ -73,13 +73,13 @@ class GracefulCacheRepository extends Repository {
         if(!is_null($value)) {
             //get the original value and the expiration time
             $originalValue = $this->getOriginalValue($value);
-            $expirationTime = $this->getExpirationTime($value) - $this->expireThreshold;
+            $expirationTime = $this->getExpirationTime($value) - static::$expireThreshold;
 
             //Check if this cache entry is going to expire soon (within {threshold} seconds)
             if(time() > $expirationTime) {
                 //to solve this, the value of the existing cache key will be extended
                 //while the new value is fetched
-                $this->put($key, $originalValue, $this->extendMinutes);
+                $this->put($key, $originalValue, static::$extendMinutes);
             }
 
             //make sure to return the original value and not the one with the expiration time in it
