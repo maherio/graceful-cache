@@ -43,10 +43,15 @@ class GracefulCacheRepository extends Repository {
      * @return string        The unmodified cached value
      */
     public function getOriginalValue($value) {
-        $suffixIndex = strpos($value, static::$gracefulPrefix);
-        $suffixLength = strlen(substr($value, $suffixIndex));
-        $originalSerializedValue = substr($value, 0, 0 - $suffixLength);
-        return unserialize($originalSerializedValue);
+        if(is_string($value)) {
+            $suffixIndex = strpos($value, static::$gracefulPrefix);
+            if($suffixIndex) {
+                $suffixLength = strlen(substr($value, $suffixIndex));
+                $originalSerializedValue = substr($value, 0, 0 - $suffixLength);
+                return unserialize($originalSerializedValue);
+            }
+        }
+        return $value;
     }
 
     /**
@@ -55,8 +60,13 @@ class GracefulCacheRepository extends Repository {
      * @return int           The timestamp of when this value will expire
      */
     public function getExpirationTime($value) {
-        $expirationIndex = strpos($value, static::$gracefulPrefix);
-        return (int) substr($value, $expirationIndex + strlen(static::$gracefulPrefix));
+        if(is_string($value)) {
+            $expirationIndex = strpos($value, static::$gracefulPrefix);
+            if($expirationIndex) {
+                return (int) substr($value, $expirationIndex + strlen(static::$gracefulPrefix));
+            }
+        }
+        return 0;
     }
 
     /**
