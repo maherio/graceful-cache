@@ -130,8 +130,11 @@ class GracefulCacheRepositoryTest extends PHPUnit_Framework_TestCase {
             ->with($cacheKey)
             ->andReturn($modifiedValue);
 
+        $expirationTime = time() + (GracefulCacheRepository::$extendMinutes * 60);
+        $modifiedValue = serialize($cacheValue) . GracefulCacheRepository::$gracefulPrefix . $expirationTime;
+
         $this->cacheStoreMock->shouldReceive('put')
-            ->with($cacheKey, $cacheValue, GracefulCacheRepository::$extendMinutes)
+            ->with($cacheKey, $modifiedValue, GracefulCacheRepository::$extendMinutes)
             ->andReturn(true);
 
         $repository = new GracefulCacheRepository($this->cacheStoreMock);
@@ -174,8 +177,11 @@ class GracefulCacheRepositoryTest extends PHPUnit_Framework_TestCase {
             ->with($cacheKey)
             ->andReturn($modifiedValue);
 
+        $expirationTime = time() + (GracefulCacheRepository::$extendMinutes * 60);
+        $modifiedValue = serialize($cacheValue) . GracefulCacheRepository::$gracefulPrefix . $expirationTime;
+
         $this->cacheStoreMock->shouldReceive('put')
-            ->with($cacheKey, $cacheValue, GracefulCacheRepository::$extendMinutes)
+            ->with($cacheKey, $modifiedValue, GracefulCacheRepository::$extendMinutes)
             ->andReturn(true);
 
         $repository = new GracefulCacheRepository($this->cacheStoreMock);
