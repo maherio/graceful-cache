@@ -1,6 +1,9 @@
 {
     "name": "maherio/graceful-cache",
     "description": "A wrapper for Laravel's Cache Repository to allow for graceful caching.",
+    "keywords": ["cache","caching","laravel"],
+    "homepage": "http://github.com/maherio/graceful-cache",
+    "license": "MIT",
     "authors": [
         {
             "name": "Tony Maher",
