@@ -15,7 +15,7 @@ class GracefulCacheRepository extends Repository {
      * The length of time (seconds) we extend each about-to-expire cache key
      * @var integer
      */
-    public static $extendMinutes = 1;
+    public static $extendMinutes = 5;
 
     /**
      * The threshold, in seconds, for how much longer a key has until expiration
