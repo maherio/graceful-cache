@@ -22,11 +22,11 @@ class GracefulCacheRepository extends Repository {
      * before it is re-fetched.
      * @var integer
      */
-    public static $expireThreshold = 60;
+    public static $expireThreshold = 30;
 
     /**
      * Adds a timing suffix to the value, in order to show when the cached value
-     * would expire
+     * will expire
      * @param  string $value   The original value the client wishes to cache
      * @param  int    $minutes The length of time this is going to be cached for
      * @return string          The modified value with expiration time appended
@@ -90,10 +90,13 @@ class GracefulCacheRepository extends Repository {
                 //to solve this, the value of the existing cache key will be extended
                 //while the new value is fetched
                 $this->put($key, $originalValue, static::$extendMinutes);
-            }
 
-            //make sure to return the original value and not the one with the expiration time in it
-            $value = $originalValue;
+                //make sure the client sees that we need a new value
+                $value = null;
+            } else {
+                //make sure to return the original value and not the one with the expiration time in it
+                $value = $originalValue;
+            }
         }
 
         return ! is_null($value) ? $value : value($default);
