@@ -153,7 +153,8 @@ class GracefulCacheRepositoryTest extends PHPUnit_Framework_TestCase {
         $repository = new GracefulCacheRepository($this->cacheStoreMock);
         $returnedValue = $repository->get($cacheKey);
 
-        $this->assertEquals($cacheValue, $returnedValue);
+        //old values should return null from the cache, so they're updated with the new one
+        $this->assertNull($returnedValue);
     }
 
     public function testGetStringGraceful() {
@@ -178,7 +179,8 @@ class GracefulCacheRepositoryTest extends PHPUnit_Framework_TestCase {
         $repository = new GracefulCacheRepository($this->cacheStoreMock);
         $returnedValue = $repository->get($cacheKey);
 
-        $this->assertEquals($cacheValue, $returnedValue);
+        //it should be null for this request so the cache refreshes
+        $this->assertNull($returnedValue);
     }
 
     public function testGetArrayNormal() {
@@ -220,7 +222,8 @@ class GracefulCacheRepositoryTest extends PHPUnit_Framework_TestCase {
         $repository = new GracefulCacheRepository($this->cacheStoreMock);
         $returnedValue = $repository->get($cacheKey);
 
-        $this->assertEquals($cacheValue, $returnedValue);
+        //old values should return null so the cache is updated
+        $this->assertNull($returnedValue);
     }
 
     public function testGetArrayGraceful() {
@@ -247,7 +250,7 @@ class GracefulCacheRepositoryTest extends PHPUnit_Framework_TestCase {
         $repository = new GracefulCacheRepository($this->cacheStoreMock);
         $returnedValue = $repository->get($cacheKey);
 
-        $this->assertEquals($cacheValue, $returnedValue);
+        $this->assertNull($returnedValue);
     }
 
 }
