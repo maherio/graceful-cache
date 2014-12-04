@@ -1,8 +1,8 @@
-<?php namespace GracefulCache\Repository;
+<?php namespace GracefulCache;
 
-use Illuminate\Cache\Repository;
+use Illuminate\Cache\Repository as BaseRepository;
 
-class GracefulCacheRepository extends Repository {
+class Repository extends BaseRepository {
 
     /**
      * The prefix of the string to be appended to each cache value. This is an added

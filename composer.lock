@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
-                "reference": "0d80e8f57521be6ce9a61c115e7177baed7880b3"
+                "reference": "834981f254d8f1ba798168c24dc0d0fe1a101720"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/cache/zipball/0d80e8f57521be6ce9a61c115e7177baed7880b3",
-                "reference": "0d80e8f57521be6ce9a61c115e7177baed7880b3",
+                "url": "https://api.github.com/repos/illuminate/cache/zipball/834981f254d8f1ba798168c24dc0d0fe1a101720",
+                "reference": "834981f254d8f1ba798168c24dc0d0fe1a101720",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,8 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2014-09-30 13:42:10"
+            "description": "The Illuminate Cache package.",
+            "time": "2014-11-20 04:36:49"
         },
         {
             "name": "illuminate/contracts",
@@ -60,12 +61,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "ccbca49fb3dd5c4d98347b8936c8b36cea5c8686"
+                "reference": "1effd8824d8b3b7679e0ee9b332750647953f7c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/ccbca49fb3dd5c4d98347b8936c8b36cea5c8686",
-                "reference": "ccbca49fb3dd5c4d98347b8936c8b36cea5c8686",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/1effd8824d8b3b7679e0ee9b332750647953f7c0",
+                "reference": "1effd8824d8b3b7679e0ee9b332750647953f7c0",
                 "shasum": ""
             },
             "require": {
@@ -92,7 +93,8 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2014-10-25 19:01:42"
+            "description": "The Illuminate Contracts package.",
+            "time": "2014-11-29 19:55:20"
         },
         {
             "name": "illuminate/support",
@@ -100,12 +102,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "1d04d64fcfad0cda2c272fe721825909a3020d2d"
+                "reference": "eba26ed09f1040a99ab9760af5b72b7e35bf73d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/1d04d64fcfad0cda2c272fe721825909a3020d2d",
-                "reference": "1d04d64fcfad0cda2c272fe721825909a3020d2d",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/eba26ed09f1040a99ab9760af5b72b7e35bf73d7",
+                "reference": "eba26ed09f1040a99ab9760af5b72b7e35bf73d7",
                 "shasum": ""
             },
             "require": {
@@ -140,7 +142,8 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2014-10-26 02:56:00"
+            "description": "The Illuminate Support package.",
+            "time": "2014-12-03 02:41:40"
         },
         {
             "name": "nesbot/carbon",
@@ -196,12 +199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "8e567de2249a8f7eb8051a855b9d0a6472d38c8e"
+                "reference": "4055c0e8577dfbc841fd384797487ff3fc75afff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/8e567de2249a8f7eb8051a855b9d0a6472d38c8e",
-                "reference": "8e567de2249a8f7eb8051a855b9d0a6472d38c8e",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/4055c0e8577dfbc841fd384797487ff3fc75afff",
+                "reference": "4055c0e8577dfbc841fd384797487ff3fc75afff",
                 "shasum": ""
             },
             "require": {
@@ -254,7 +257,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2014-10-16 09:15:15"
+            "time": "2014-11-18 13:37:25"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -632,17 +635,17 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "dev-master",
+            "version": "2.7.x-dev",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "4c0baf9a5b5c9e50ddd7a46f3c75cb85baf5d6c5"
+                "reference": "610f01968f2cd731fdf59dfeae904ed930afc35f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/4c0baf9a5b5c9e50ddd7a46f3c75cb85baf5d6c5",
-                "reference": "4c0baf9a5b5c9e50ddd7a46f3c75cb85baf5d6c5",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/610f01968f2cd731fdf59dfeae904ed930afc35f",
+                "reference": "610f01968f2cd731fdf59dfeae904ed930afc35f",
                 "shasum": ""
             },
             "require": {
@@ -651,7 +654,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -675,7 +678,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-10-26 07:46:28"
+            "time": "2014-12-02 20:19:50"
         }
     ],
     "aliases": [],

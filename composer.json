@@ -8,6 +8,10 @@
         {
             "name": "Tony Maher",
             "email": "amaher@alumni.nd.edu"
+        },
+        {
+            "name": "Steven Maguire",
+            "email": "stevenmaguire@gmail.com"
         }
     ],
     "minimum-stability": "dev",
@@ -21,7 +25,7 @@
     },
     "autoload": {
         "classmap": [
-            "src/GracefulCache/Repository"
+            "src/GracefulCache"
         ],
         "psr-0": {
             "GracefulCache": "src/GracefulCache"
