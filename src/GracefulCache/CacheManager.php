@@ -15,4 +15,15 @@ class CacheManager extends BaseCacheManager
     {
         return new Repository($store);
     }
+
+    /**
+     * Create a new cache repository with the given implementation.
+     *
+     * @param  \Illuminate\Cache\StoreInterface  $store
+     * @return \GracefulCache\Repository
+     */
+    public function buildRepository(StoreInterface $store)
+    {
+        return $this->repository($store);
+    }
 }

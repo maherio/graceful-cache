@@ -26,3 +26,15 @@ In your `config/app.php` add `'GracefulCache\ServiceProvider'` to the end of the
 ),
 ```
 
+### Cache driver extensions
+
+```php
+Cache::extend('elasticache', function() {
+    $servers = Config::get('cache.memcached');
+    $elasticache = new Illuminate\Cache\ElasticacheConnector();
+    $memcached = $elasticache->connect($servers);
+    return Cache::buildRepository(new Illuminate\Cache\MemcachedStore($memcached, Config::get('cache.prefix')));
+});
+```
+
+*The `buildRepository` method is provided by the GracefulCache package and is not supported by the Laravel framework.*
