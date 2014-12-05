@@ -18,7 +18,7 @@ class CacheManagerTest extends PHPUnit_Framework_TestCase
     public function testBuildingRepository()
     {
         $manager = new CacheManager($this->appMock);
-        $repository = $manager->buildRepository($this->cacheStoreMock);
+        $repository = $manager->getRepository($this->cacheStoreMock);
 
         $this->assertTrue(is_subclass_of($repository, 'Illuminate\Cache\Repository'));
         $this->assertEquals(get_class($repository), 'GracefulCache\Repository');

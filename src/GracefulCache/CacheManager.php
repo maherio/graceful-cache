@@ -22,7 +22,7 @@ class CacheManager extends BaseCacheManager
      * @param  \Illuminate\Cache\StoreInterface  $store
      * @return \GracefulCache\Repository
      */
-    public function buildRepository(StoreInterface $store)
+    public function getRepository(StoreInterface $store)
     {
         return $this->repository($store);
     }
